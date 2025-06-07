@@ -411,3 +411,6 @@ footer {
 .music-button:hover {
     background-color: var(--red-main);
 }
+main {
+    display: none; /* Esconde a seção principal por padrão */
+}
