@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Presente Especial para Yudi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <div id="countdown-container">
+                <p id="countdown">Carregando contagem regressiva...</p>
+                <h1 id="finalMessage" style="display: none;"></h1> 
+            </div>
+            
+            <p class="initial-message" data-aos="fade-up" data-aos-delay="500">
+                Meu amor, preparei algo especial para você. <br>Cada detalhe foi feito com todo o meu amor e carinho! ❤️
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section id="our-first-date" class="content-section" data-aos="fade-up">
+            <h2 class="section-title">primeira vez que você veio aqui em casa, e nós saimos juntos🥺</h2>
+            <div class="section-content">
+                <img src="img/primeira.jpg" alt="Foto do nosso primeiro encontro" class="heart-shape-image">
+                <p>
+                    Lembra daquele dia em que você veio pra cá e nós saímos, fomos pra lá dos Guias, sua primeira vez indo com meus pais 😂 Foi muito bom aquele dia! 
+                </p>
+            </div>
+        </section>
+
+        <section id="unforgettable-moments" class="content-section" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="section-title">Momentos Inesquecíveis</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="img/personalizando.nossas.jpg" alt="Momento inesquecível 1" class="carousel-image heart-shape-image">
+                    <p class="image-caption">Nós personalizando nossas blusas com a inicial de cada um C & Y😍</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/anel.sheinn.jpg" alt="Momento inesquecível 2" class="carousel-image heart-shape-image">
+                    <p class="image-caption">Dia em que nós começou a usar nosso primeiro anel da shein, e ele já ficou rosa kakaakaakaa</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/comendo.aqui.jpg" alt="Momento inesquecível 3" class="carousel-image heart-shape-image">
+                    <p class="image-caption">Dia em que você estava com fome, e eu dei almoço pra você 🥺</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/pastel.cai.jpg" alt="Momento inesquecível 4" class="carousel-image heart-shape-image">
+                    <p class="image-caption">No dia da festa da Caiçara, e nós comprou pastel de Queijo e uma Fanta uva para comer😋</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/flores.cai.jpg" alt="Momento inesquecível 5" class="carousel-image heart-shape-image">
+                    <p class="image-caption">No mesmo dia da festa, você comprou essa flor para mim🥺❤️</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/carta.pravc.jpg" alt="Momento inesquecível 6" class="carousel-image heart-shape-image">
+                    <p class="image-caption">No dia que eu fiz algumas cartinhas para você❤️</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/barinha.jpg" alt="Momento inesquecível 7" class="carousel-image heart-shape-image">
+                    <p class="image-caption">No dia que nós foi pra barrinha, dia dos namorados, foi em um domingo❤️</p>
+                </div>
+                <button class="carousel-btn prev">&lt;</button>
+                <button class="carousel-btn next">&gt;</button>
+            </div>
+            <p class="carousel-text">Cada um desses momentos está guardado com carinho no meu coração.</p>
+        </section>
+
+        <section id="why-i-love-you" class="content-section" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="section-title">Por Que Eu Te Amo</h2>
+            <ul class="love-list">
+                <li data-aos="fade-right">Amo seu Amor❤️.</li>
+                <li data-aos="fade-right" data-aos-delay="100">Amo sua paciência e seu jeito de me acalmar🫂.</li>
+                <li data-aos="fade-right" data-aos-delay="200">Amo sua capacidade de me fazer rir, mesmo nos dias mais difíceis🥺.</li>
+                <li data-aos="fade-right" data-aos-delay="300">Amo como você me apoia em tudo e acredita em mim💕.</li>
+                <li data-aos="fade-right" data-aos-delay="400">Amo o presente e o futuro que vamos construir juntos😍.</li>
+            </ul>
+        </section>
+
+        <section id="our-future-dreams" class="content-section" data-aos="fade-up" data-aos-delay="600">
+            <h2 class="section-title">Nossos Sonhos Futuros</h2>
+            <div class="section-content">
+                <img src="img/anel.finaldoano.jpg" alt="Imagem de sonhos futuros" class="heart-shape-image">
+                <p>
+                    Com você, cada sonho se torna mais possível e real. Mal posso esperar para viver cada um deles ao seu lado, construindo a nossa história e o nosso lar. Que venham mais viagens, mais descobertas e muitas alegrias!
+                </p>
+            </div>
+        </section>
+
+        <section id="final-message" class="content-section" data-aos="fade-up" data-aos-delay="800">
+            <h2 class="section-title">Uma Mensagem Especial para Você</h2>
+            <div class="message-box">
+                <button id="revealMessageBtn" class="reveal-button">Clique para descobrir minha mensagem!</button>
+                <p id="hiddenMessage" class="hidden-text">
+                    Meu amor, você é a pessoa mais incrível que já conheci. Agradeço por cada risada, cada abraço, cada momento ao seu lado. Você me faz feliz de um jeito que nunca imaginei ser possível. Te amo hoje e sempre! ❤️
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Feito com todo o amor do mundo para [Nome do Namorado]</p>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="audio/namoro.mp3" type="audio/mpeg">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
+    <button id="musicToggleBtn" class="music-button" style="display: none;">Reproduzir Música</button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

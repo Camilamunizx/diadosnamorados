@@ -1,0 +1,413 @@
+/* style.css */
+
+/* Reset Básico para Consistência entre Navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não aumentam o tamanho do elemento */
+}
+
+/* Estilos Globais */
+:root {
+    /* Definição da Paleta de Cores */
+    --red-main: #E74C3C; /* Vermelho principal para destaque */
+    --red-light: #FADBD8; /* Vermelho bem claro, quase rosa */
+    --white: #FFFFFF; /* Branco */
+    --gray-text: #34495E; /* Cor para texto mais escuro */
+    --light-gray: #ECF0F1; /* Cinza claro para fundos alternados ou bordas */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão, pode mudar para uma mais romântica! */
+    line-height: 1.6;
+    color: var(--gray-text); /* Cor do texto padrão */
+    background-color: var(--white); /* Fundo branco */
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+}
+
+/* Estilos para o link de fontes do Google (se for usar) */
+/* Se quiser fontes personalizadas, adicione no <head> do HTML:
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+   E depois use-as aqui:
+   font-family: 'Dancing Script', cursive; (para títulos)
+   font-family: 'Open Sans', sans-serif; (para textos)
+*/
+/* Cabeçalho - Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--red-light), var(--white)); /* Gradiente suave */
+    color: var(--gray-text);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: fadeIn 2s ease-in-out; /* Animação suave de entrada */
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para o conteúdo */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Estilos para a Contagem Regressiva */
+#countdown-container {
+    margin-bottom: 20px;
+}
+
+#countdown {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--red-main);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.5s ease-in-out; /* Suaviza a transição quando o texto muda */
+}
+
+/* Estilos para a Mensagem Final */
+#finalMessage {
+    font-size: 3em; /* Tamanho maior para a mensagem final */
+    font-weight: bold;
+    color: var(--red-main);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    /* Se você usar uma fonte diferente para títulos, aplique aqui */
+    /* font-family: 'Dancing Script', cursive; */
+    animation: scaleIn 1s ease-out forwards; /* Animação quando aparece */
+}
+
+/* Estilos para a Mensagem Inicial (depois da contagem) */
+.initial-message {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: var(--gray-text);
+}
+
+/* Animações Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/* Estilos Gerais para as Seções de Conteúdo */
+.content-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease; /* Para um efeito sutil ao passar o mouse ou focar */
+}
+
+.content-section:nth-child(even) { /* Para alternar cores de fundo se quiser */
+    background-color: var(--red-light);
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: var(--red-main);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block; /* Para o underline ficar só no texto */
+}
+
+.section-title::after { /* Sublinhado decorativo */
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--red-main);
+    border-radius: 2px;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-content p {
+    font-size: 1.1em;
+    color: var(--gray-text);
+    max-width: 700px;
+    margin: 0 auto;
+}
+/* Estilo das Imagens em Formato de Coração */
+.heart-shape-image {
+    width: 250px; /* Tamanho da imagem */
+    height: 250px;
+    object-fit: cover; /* Garante que a imagem preenche o contêiner */
+    background-color: var(--light-gray); /* Cor de fundo caso a imagem não carregue */
+    /* Cria o formato de coração com clip-path */
+    border-radius: 20px; /* Bordas arredondadas (visível onde não há clip-path) */
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    transition: transform 0.4s ease-in-out; /* Transição para o efeito de hover */
+    display: block; /* Para centralizar com margin auto */
+    margin: 0 auto;
+}
+
+.heart-shape-image:hover {
+    transform: scale(1.08); /* Aumenta um pouco a imagem ao passar o mouse */
+}
+/* Carrossel de Fotos */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px; /* Largura máxima do carrossel */
+    margin: 30px auto;
+    overflow: hidden; /* Esconde partes das imagens que estão fora */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Para centralizar os slides */
+}
+
+.carousel-slide {
+    display: none; /* Esconde os slides por padrão, JS vai mostrar o 'active' */
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Animação ao mudar de slide */
+}
+
+.carousel-slide.active {
+    display: block; /* Mostra o slide ativo */
+}
+
+.carousel-image {
+    width: 280px; /* Tamanho das imagens dentro do carrossel */
+    height: 280px;
+    margin-bottom: 15px;
+    /* Já aplica as classes heart-shape-image no HTML, então herda os estilos */
+}
+
+.image-caption {
+    font-style: italic;
+    color: var(--gray-text);
+    font-size: 1em;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(231, 76, 60, 0.8); /* Vermelho com transparência */
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 50%; /* Botões redondos */
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Garante que os botões fiquem acima das imagens */
+}
+
+.carousel-btn:hover {
+    background-color: var(--red-main);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-text {
+    font-size: 1.1em;
+    color: var(--gray-text);
+    margin-top: 20px;
+}
+/* Por Que Eu Te Amo - Lista */
+.love-list {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0;
+    margin-top: 30px;
+}
+
+.love-list li {
+    background-color: var(--red-light);
+    color: var(--gray-text);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 1.1em;
+    text-align: left; /* Alinha o texto à esquerda */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative; /* Para o ícone de coração */
+    padding-left: 40px; /* Espaço para o coração */
+}
+
+.love-list li::before {
+    content: '❤️'; /* Ícone de coração */
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+}
+
+.love-list li:hover {
+    transform: translateX(10px); /* Move ligeiramente para a direita ao passar o mouse */
+    background-color: #F8C4C1; /* Um tom ligeiramente mais escuro no hover */
+}
+/* Mensagem Secreta */
+.message-box {
+    margin-top: 30px;
+    background-color: var(--red-light);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.reveal-button {
+    background-color: var(--red-main);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.reveal-button:hover {
+    background-color: #C0392B; /* Tom mais escuro do vermelho */
+    transform: translateY(-3px); /* Efeito de "pular" */
+}
+
+.hidden-text {
+    margin-top: 25px;
+    font-size: 1.3em;
+    color: var(--gray-text);
+    line-height: 1.8;
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); /* Sombra interna */
+    /* A visibilidade é controlada pelo JavaScript */
+    animation: fadeIn 1s ease-in-out; /* Animação de entrada */
+}
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--gray-text);
+    color: var(--white);
+    font-size: 0.9em;
+    margin-top: 50px;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 15px;
+    }
+
+    #countdown {
+        font-size: 2em;
+    }
+
+    #finalMessage {
+        font-size: 2.5em;
+    }
+
+    .initial-message {
+        font-size: 1em;
+    }
+
+    .content-section {
+        padding: 40px 15px;
+        margin: 20px auto;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .section-content p,
+    .love-list li,
+    .hidden-text {
+        font-size: 1em;
+    }
+
+    .heart-shape-image,
+    .carousel-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .carousel-btn {
+        padding: 8px 12px;
+        font-size: 1.2em;
+    }
+
+    .reveal-button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #countdown {
+        font-size: 1.5em;
+    }
+
+    #finalMessage {
+        font-size: 2em;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .heart-shape-image,
+    .carousel-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .carousel-btn {
+        padding: 5px 10px;
+        font-size: 1em;
+    }
+}
+.music-button {
+    background-color: rgba(231, 76, 60, 0.7); /* Tom semi-transparente do seu vermelho */
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: fixed; /* Fixa na tela */
+    bottom: 20px; /* Posição na parte inferior */
+    left: 20px; /* Posição na parte esquerda */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+.music-button:hover {
+    background-color: var(--red-main);
+}
